@@ -1,0 +1,5 @@
+Place your real resume PDF file here as:
+/run/media/andesindica/OS/portfolio/public/resume.pdf
+
+Once added, the "Download Résumé" button in the portfolio navbar will immediately serve your PDF.
+
