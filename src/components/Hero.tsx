@@ -40,7 +40,7 @@ export function Hero() {
           </p>
 
           <p className="text-base sm:text-lg text-zinc-600 dark:text-zinc-400 leading-relaxed mb-8">
-            Computer Science student at <strong>IIIT Dharwad</strong> specializing in Cybersecurity. I engineer resilient backend services, automate release CI/CD pipelines, and contribute to high-performance open-source projects like <strong>Orbit</strong>.
+            Computer Science student at <strong>IIIT Dharwad</strong> specializing in Cybersecurity. I engineer resilient backend services, automate release CI/CD pipelines, and bring a first-principles systems mindset to software architecture, financial market mechanics, and business models.
           </p>
 
           {/* Action CTAs */}
@@ -104,4 +104,3 @@ export function Hero() {
     </section>
   );
 }
-

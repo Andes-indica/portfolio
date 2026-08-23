@@ -6,12 +6,13 @@ export const portfolioData: PortfolioData = {
     preferredName: "Prajwal",
     githubUsername: "Andes-indica",
     title: "Software Engineer & Computer Science Undergraduate",
-    tagline: "Building resilient systems, cloud infrastructure, and open-source tooling.",
-    headline: "CS & Cybersecurity Undergraduate | Full-Stack, Backend, DevOps & Open Source",
+    tagline: "Building resilient systems at the intersection of technical depth, business model mechanics, and first-principles thinking.",
+    headline: "CS & Cybersecurity @ IIIT Dharwad | Systems & DevOps | Stock Markets, Business Models & Geopolitics Enthusiast",
     bioParagraphs: [
-      "I am a third-year Computer Science undergraduate with a minor in Cybersecurity at the Indian Institute of Information Technology (IIIT) Dharwad. I focus on full-stack development, backend systems, DevOps automation, cloud architecture, and cybersecurity.",
-      "My engineering philosophy centers on learning by building real systems from the ground up whether that means implementing multi-threaded TCP servers in C, architecting full-stack monorepos in Bun & TypeScript, modeling market risk in Python, or automating continuous integration workflows in open-source projects.",
-      "I am an active open-source contributor, notably to Orbit (a realtime, keyboard-first task manager monorepo), where I have designed automated release pipelines, strengthened CI link-check workflows, and refined developer documentation. I am actively seeking software engineering and DevOps internship opportunities where I can apply rigorous systems thinking to real-world products."
+      "I am a third-year Computer Science undergraduate with a minor in Cybersecurity at the Indian Institute of Information Technology (IIIT) Dharwad. Beyond writing code, I approach software engineering with a high-agency, first-principles mindset—viewing technology not in isolation, but as the core engine driving global commerce, financial infrastructure, and scalable businesses.",
+      "I have a deep intellectual passion for equity markets, corporate business models, and economic moats. I love studying annual reports, dissecting how companies compound capital, analyzing unit economics, and understanding market microstructure. This curiosity directly inspired several of my core projects: architecting a multi-client Portfolio & Order Management System (PMS-OMS) and developing a systematic market risk engine for Indian benchmark indices.",
+      "An avid non-fiction reader, I actively study global geopolitics, macroeconomic cycles, and technology history. I connect the dots between sovereign supply chain shifts, semiconductor bottlenecks, monetary policy regimes, and software architecture. This multidimensional lens gives me a sharp clarity on why systems are built, what commercial value they unlock, and how to engineer them for long-term resilience.",
+      "In open-source and systems engineering, I focus on production discipline—automating CI/CD release pipelines and link verification for the Orbit monorepo, implementing multi-threaded POSIX socket servers in C, and orchestrating DevSecOps vulnerability workflows."
     ],
     email: "23bcs048@iiitdwd.ac.in",
     linkedIn: "http://linkedin.com/in/prajwal-gv-786a8629a/",
@@ -21,10 +22,10 @@ export const portfolioData: PortfolioData = {
     location: "Dharwad, Karnataka, India",
     status: "Seeking SWE / DevOps Internships (Summer & Fall)",
     quickStats: [
-      { label: "Degree & Year", value: "3rd Year B.Tech", description: "CS with Cybersecurity Minor" },
+      { label: "Degree & Major", value: "3rd Year B.Tech", description: "CS with Cybersecurity Minor" },
       { label: "Open Source", value: "Orbit Contributor", description: "CI/CD, Bun monorepo, Docs" },
       { label: "Core Stack", value: "TS • Python • C++ • Bun", description: "React, Next.js, Docker, Linux" },
-      { label: "Engineering Focus", value: "Full-Stack & DevOps", description: "Systems, Security & Cloud" }
+      { label: "Intellectual Edge", value: "Markets & Geopolitics", description: "Business models, Quant risk, Macro" }
     ]
   },
   socialLinks: [
@@ -61,6 +62,47 @@ export const portfolioData: PortfolioData = {
         "Specialized cybersecurity curriculum covering Network Security, Cryptography, Container Defense, and Vulnerability Assessment.",
         "Architected automated academic scheduling engine for campus course registration and room allocation."
       ]
+    }
+  ],
+  intellectualPillars: [
+    {
+      title: "Stock Markets & Business Model Dissection",
+      category: "Capital Allocation & Business Moats",
+      tagline: "Deconstructing unit economics, competitive moats, and capital compounding flywheels.",
+      description: "Fascinated by analyzing how companies create and sustain value. I study annual reports, investor memos, margin expansion drivers, customer acquisition flywheels, and market microstructure. I believe great software engineers must understand the business problem and economic mechanics behind what they build.",
+      keyThemes: [
+        "Economic Moats & Pricing Power",
+        "Unit Economics & Free Cash Flow Analysis",
+        "Market Microstructure & Order Book Mechanics",
+        "Annual Reports (10-K) & Founder Capital Allocation"
+      ],
+      iconName: "trending-up"
+    },
+    {
+      title: "Global Geopolitics & Macroeconomic Dynamics",
+      category: "Global Systems & Supply Chains",
+      tagline: "Connecting global trade flows, semiconductor choke points, and monetary policy.",
+      description: "Deeply interested in understanding world affairs, sovereign supply chain realignments, the global semiconductor choke points (ASML, TSMC), energy security, and central bank liquidity regimes. I love analyzing how international trade rules and geopolitical shifts impact technological infrastructure.",
+      keyThemes: [
+        "Semiconductor Supply Chain Geopolitics",
+        "Macroeconomic Cycles & Sovereign Debt",
+        "Tech Sovereignty & Critical Infrastructure Defense",
+        "Global Trade Dynamics & Energy Transitions"
+      ],
+      iconName: "globe"
+    },
+    {
+      title: "Deep Non-Fiction Reading & Mental Models",
+      category: "First-Principles Thinking",
+      tagline: "Synthesizing lessons from business history, biographies, and complex adaptive systems.",
+      description: "Voracious reader of books on business history, investing philosophy (Buffett, Munger, Howard Marks), technological revolutions, psychology of decision-making, and systems thinking. Reading across disciplines trains me to see second-order effects and make sound architectural decisions.",
+      keyThemes: [
+        "Business History & Iconic Founder Biographies",
+        "Mental Models & Second-Order Thinking",
+        "Complex Adaptive Systems & Network Effects",
+        "Engineering Philosophy & Risk Asymmetry"
+      ],
+      iconName: "book-open"
     }
   ],
   openSource: [
@@ -450,4 +492,3 @@ export const portfolioData: PortfolioData = {
     ]
   }
 };
-

@@ -88,6 +88,15 @@ export interface CuratedGitHubData {
   highlightNotes: string[];
 }
 
+export interface IntellectualPillar {
+  title: string;
+  category: string;
+  tagline: string;
+  description: string;
+  keyThemes: string[];
+  iconName: "trending-up" | "book-open" | "globe" | "brain";
+}
+
 export interface PortfolioData {
   personal: {
     name: string;
@@ -108,9 +117,9 @@ export interface PortfolioData {
   };
   socialLinks: SocialLink[];
   education: EducationItem[];
+  intellectualPillars: IntellectualPillar[];
   openSource: OpenSourceProject[];
   projects: Project[];
   skillCategories: SkillCategory[];
   githubData: CuratedGitHubData;
 }
-
