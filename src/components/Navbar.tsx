@@ -88,7 +88,7 @@ export function Navbar() {
               title="Download Résumé (Placeholder ready for PDF upload)"
             >
               <FileDown className="h-3.5 w-3.5 text-sky-500 group-hover:translate-y-0.5 transition-transform" />
-              <span>Résumé</span>
+              <span>Resume</span>
               {portfolioData.personal.isResumePlaceholder && (
                 <span className="flex h-1.5 w-1.5 rounded-full bg-amber-400" title="Placeholder" />
               )}
