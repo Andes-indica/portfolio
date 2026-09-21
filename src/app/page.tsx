@@ -2,6 +2,7 @@ import {
   ArrowRight,
   ArrowUpRight,
   Check,
+  ChevronDown,
   Code2,
   ExternalLink,
   GitBranch,
@@ -14,7 +15,7 @@ import { portfolioData } from "@/data/portfolioData";
 const sectionLabel = "text-xs font-semibold uppercase tracking-[0.22em] text-sky-600 dark:text-sky-400";
 
 export default function Home() {
-  const { personal, links, proof, projects, openSource, stack, interests } = portfolioData;
+  const { personal, links, proof, projects, otherProjects, openSource, stack, interests } = portfolioData;
 
   return (
     <main>
@@ -108,41 +109,94 @@ export default function Home() {
             </article>
           ))}
         </div>
+
+        <details className="project-archive group mt-8 overflow-hidden rounded-2xl border border-zinc-200 bg-white dark:border-white/10 dark:bg-white/[0.025]">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-5 px-6 py-5 transition hover:bg-zinc-50 dark:hover:bg-white/[0.025] sm:px-8">
+            <span>
+              <span className="block font-semibold text-zinc-950 dark:text-white">Explore all projects</span>
+              <span className="mt-1 block text-sm text-zinc-500 dark:text-zinc-400">
+                {otherProjects.length} more builds across DevOps, systems, security, automation, and parallel computing.
+              </span>
+            </span>
+            <ChevronDown className="archive-chevron h-5 w-5 shrink-0 text-zinc-400 transition-transform duration-200" />
+          </summary>
+
+          <div className="grid gap-px border-t border-zinc-200 bg-zinc-200 dark:border-white/10 dark:bg-white/10 md:grid-cols-2">
+            {otherProjects.map((project) => (
+              <article key={project.name} className="bg-white p-6 dark:bg-zinc-950 sm:p-7">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-sky-600 dark:text-sky-400">
+                  {project.category}
+                </p>
+                <h3 className="mt-2 text-lg font-semibold text-zinc-950 dark:text-white">{project.name}</h3>
+                <p className="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400">{project.description}</p>
+                <div className="mt-5 flex flex-wrap items-center gap-2">
+                  {project.stack.map((item) => <span key={item} className="tech-pill">{item}</span>)}
+                </div>
+                <a className="text-link mt-6" href={project.github} target="_blank" rel="noreferrer">
+                  <GitBranch className="h-4 w-4" /> Repository <ArrowUpRight className="h-3.5 w-3.5" />
+                </a>
+              </article>
+            ))}
+          </div>
+        </details>
       </section>
 
       <section id="open-source" className="scroll-mt-20 border-y border-zinc-200 bg-zinc-100/60 py-20 dark:border-white/10 dark:bg-white/[0.025] md:py-28">
-        <div className="mx-auto grid max-w-6xl gap-12 px-5 sm:px-8 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
-          <div>
-            <p className={sectionLabel}>Open source</p>
-            <h2 className="mt-3 text-3xl font-semibold tracking-[-0.035em] text-zinc-950 dark:text-white sm:text-4xl">
-              Production work in Orbit.
-            </h2>
-            <p className="mt-5 text-base leading-7 text-zinc-600 dark:text-zinc-300">{openSource.summary}</p>
-            <a className="mt-7 inline-flex items-center gap-2 text-sm font-semibold text-zinc-950 hover:text-sky-600 dark:text-white dark:hover:text-sky-400" href={openSource.url} target="_blank" rel="noreferrer">
-              {openSource.repo} <ArrowUpRight className="h-4 w-4" />
-            </a>
+        <div className="mx-auto max-w-6xl px-5 sm:px-8">
+          <div className="section-heading">
+            <div>
+              <p className={sectionLabel}>Open source</p>
+              <h2>Seven merged contributions.</h2>
+            </div>
+            <p>CI/CD, documentation systems, developer tooling, and security dashboards across three repositories.</p>
           </div>
 
-          <div className="divide-y divide-zinc-200 border-y border-zinc-200 dark:divide-white/10 dark:border-white/10">
-            {openSource.contributions.map((contribution) => (
-              <a
-                key={contribution.number}
-                href={contribution.url}
-                target="_blank"
-                rel="noreferrer"
-                className="group grid gap-2 py-5 transition-colors sm:grid-cols-[70px_1fr_auto] sm:items-start sm:gap-5"
+          <div className="grid gap-5 lg:grid-cols-2">
+            {openSource.map((project, index) => (
+              <article
+                key={project.repo}
+                className={`rounded-2xl border border-zinc-200 bg-white p-6 dark:border-white/10 dark:bg-zinc-950 sm:p-8 ${index === 0 ? "lg:col-span-2" : ""}`}
               >
-                <span className="text-xs font-semibold text-purple-600 dark:text-purple-400">MERGED</span>
-                <span>
-                  <span className="block font-semibold text-zinc-900 group-hover:text-sky-600 dark:text-white dark:group-hover:text-sky-400">
-                    {contribution.title}
-                  </span>
-                  <span className="mt-1 block text-sm leading-6 text-zinc-500 dark:text-zinc-400">{contribution.detail}</span>
-                </span>
-                <span className="flex items-center gap-1 text-xs font-medium text-zinc-400 group-hover:text-sky-600 dark:group-hover:text-sky-400">
-                  #{contribution.number} <ArrowUpRight className="h-3.5 w-3.5" />
-                </span>
-              </a>
+                <div className={`${index === 0 ? "lg:grid lg:grid-cols-[0.6fr_1.4fr] lg:gap-12" : ""}`}>
+                  <div>
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <p className="text-xs font-semibold uppercase tracking-[0.16em] text-purple-600 dark:text-purple-400">
+                          {project.contributions.length} merged {project.contributions.length === 1 ? "PR" : "PRs"}
+                        </p>
+                        <h3 className="mt-2 text-2xl font-semibold tracking-tight text-zinc-950 dark:text-white">{project.project}</h3>
+                      </div>
+                      <a className="text-link" href={project.url} target="_blank" rel="noreferrer" aria-label={`Open ${project.repo}`}>
+                        <ArrowUpRight className="h-4 w-4" />
+                      </a>
+                    </div>
+                    <p className="mt-4 text-sm leading-6 text-zinc-600 dark:text-zinc-400">{project.summary}</p>
+                    <p className="mt-4 text-xs font-medium text-zinc-400">{project.repo}</p>
+                  </div>
+
+                  <div className={`${index === 0 ? "mt-7 lg:mt-0" : "mt-7"} divide-y divide-zinc-200 border-y border-zinc-200 dark:divide-white/10 dark:border-white/10`}>
+                    {project.contributions.map((contribution) => (
+                      <a
+                        key={contribution.number}
+                        href={contribution.url}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="group grid gap-1 py-4 sm:grid-cols-[1fr_auto] sm:gap-5"
+                      >
+                        <span>
+                          <span className="block text-sm font-semibold text-zinc-900 group-hover:text-sky-600 dark:text-white dark:group-hover:text-sky-400">
+                            {contribution.title}
+                          </span>
+                          <span className="mt-1 block text-xs leading-5 text-zinc-500 dark:text-zinc-400">{contribution.detail}</span>
+                        </span>
+                        <span className="flex items-center gap-1 text-xs font-medium text-zinc-400 group-hover:text-sky-600 dark:group-hover:text-sky-400">
+                          #{contribution.number} <ArrowUpRight className="h-3.5 w-3.5" />
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </article>
             ))}
           </div>
         </div>
@@ -168,11 +222,12 @@ export default function Home() {
           </div>
 
           <div>
-            <h3 className="text-sm font-semibold text-zinc-950 dark:text-white">What keeps me curious</h3>
+            <h3 className="text-sm font-semibold text-zinc-950 dark:text-white">Intellectual Framework &amp; Passions</h3>
             <ul className="mt-5 grid gap-3 sm:grid-cols-2">
               {interests.map((interest) => (
-                <li key={interest} className="rounded-xl border border-zinc-200 bg-white p-4 text-sm leading-6 text-zinc-600 dark:border-white/10 dark:bg-white/[0.025] dark:text-zinc-300">
-                  {interest}
+                <li key={interest.title} className="rounded-xl border border-zinc-200 bg-white p-4 dark:border-white/10 dark:bg-white/[0.025]">
+                  <span className="block text-sm font-semibold text-zinc-900 dark:text-white">{interest.title}</span>
+                  <span className="mt-1.5 block text-xs leading-5 text-zinc-500 dark:text-zinc-400">{interest.description}</span>
                 </li>
               ))}
             </ul>

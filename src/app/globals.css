@@ -93,6 +93,14 @@
   mask-image: linear-gradient(to bottom, black, transparent 88%);
 }
 
+.project-archive > summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-archive[open] .archive-chevron {
+  transform: rotate(180deg);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -6,8 +6,9 @@ A concise, recruiter-focused portfolio for my software engineering work, open-so
 
 ## Highlights
 
-- Selected work: PMS–OMS, Darukaa Earth, and the Indian Market Risk Engine
-- Four merged contributions to [Noveum/orbit](https://github.com/Noveum/orbit)
+- Three featured builds plus an expandable archive covering all ten portfolio projects
+- Seven merged open-source contributions across Orbit, Phantom, and Trivy CI/CD
+- A concise Intellectual Framework & Passions section covering markets, business models, macro, geopolitics, technology supply chains, and systems thinking
 - Direct links to source code, the deployed Darukaa product, résumé, LinkedIn, GitHub, and CodeChef
 - Responsive light/dark design with concise copy and accessible navigation
 - SEO metadata, structured data, sitemap, and robots configuration

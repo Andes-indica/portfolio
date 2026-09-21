@@ -18,8 +18,8 @@ export const portfolioData = {
     codechef: "https://www.codechef.com/users/andesindica25",
   },
   proof: [
-    { value: "4", label: "Orbit PRs merged" },
-    { value: "3", label: "Selected products" },
+    { value: "7", label: "Open-source PRs merged" },
+    { value: "10", label: "Projects built" },
     { value: "2027", label: "B.Tech graduation" },
   ],
   projects: [
@@ -57,39 +57,125 @@ export const portfolioData = {
       featured: false,
     },
   ],
-  openSource: {
-    project: "Orbit",
-    repo: "Noveum/orbit",
-    url: "https://github.com/Noveum/orbit",
-    summary:
-      "Contributed production CI/CD and documentation infrastructure to a TypeScript/Bun monorepo used for real-time project management.",
-    contributions: [
-      {
-        number: 364,
-        title: "Published a searchable VitePress documentation site",
-        detail: "Generated navigation, local search, themed docs, and GitHub Pages deployment.",
-        url: "https://github.com/Noveum/orbit/pull/364",
-      },
-      {
-        number: 333,
-        title: "Automated dated releases and release notes",
-        detail: "Added recovery-safe, idempotent tagging with tested GitHub API validation.",
-        url: "https://github.com/Noveum/orbit/pull/333",
-      },
-      {
-        number: 315,
-        title: "Added secure Markdown link verification",
-        detail: "Introduced Lychee checks with immutable action pins and accurate failure handling.",
-        url: "https://github.com/Noveum/orbit/pull/315",
-      },
-      {
-        number: 305,
-        title: "Removed duplicated quick-start documentation",
-        detail: "Created one canonical setup path to reduce documentation drift.",
-        url: "https://github.com/Noveum/orbit/pull/305",
-      },
-    ],
-  },
+  otherProjects: [
+    {
+      name: "Container Security & ML Pipeline",
+      category: "DevSecOps",
+      description: "Trivy scanning, LocalStack cloud emulation, PostgreSQL history, and ML-assisted vulnerability prioritization.",
+      stack: ["Python", "Trivy", "Docker"],
+      github: "https://github.com/Andes-indica/trivy-cicd-github-repo",
+    },
+    {
+      name: "Automated Timetable Scheduler",
+      category: "Constraint solving",
+      description: "Schedules courses, faculty, rooms, and elective baskets while resolving institutional constraints.",
+      stack: ["Python", "Pandas", "OpenPyXL"],
+      github: "https://github.com/Andes-indica/Time-Table",
+    },
+    {
+      name: "Concurrent TCP Server",
+      category: "Systems & networking",
+      description: "A POSIX socket server with pthread concurrency and simulations of core network protocols.",
+      stack: ["C", "C++", "POSIX"],
+      github: "https://github.com/Andes-indica/Simple-TCP-socket-communication",
+    },
+    {
+      name: "Jenkins CI/CD Deployment",
+      category: "DevOps",
+      description: "A Flask delivery pipeline from GitHub checkout through Docker build, registry push, and deployment.",
+      stack: ["Jenkins", "Docker", "Flask"],
+      github: "https://github.com/Andes-indica/jenkins-ci-cd",
+    },
+    {
+      name: "TTD Queue Automation Extension",
+      category: "Browser tooling",
+      description: "A Manifest V3 extension that detects queue release and autofills time-sensitive booking forms.",
+      stack: ["JavaScript", "Chrome API", "DOM"],
+      github: "https://github.com/Andes-indica/TTD-Extension",
+    },
+    {
+      name: "CUDA GPU Kernels",
+      category: "Parallel computing",
+      description: "CUDA C++ matrix, DAXPY, and device-query programs exploring GPU execution hierarchies.",
+      stack: ["CUDA", "C++", "GPU"],
+      github: "https://github.com/Andes-indica/CUDA-",
+    },
+    {
+      name: "Local Audio Extraction Utility",
+      category: "Privacy tooling",
+      description: "A local Python utility for extracting selected audio ranges without third-party converters.",
+      stack: ["Python", "CLI", "Media"],
+      github: "https://github.com/Andes-indica/Youtube-audio-clipper",
+    },
+  ],
+  openSource: [
+    {
+      project: "Orbit",
+      repo: "Noveum/orbit",
+      url: "https://github.com/Noveum/orbit",
+      summary: "Production CI/CD and documentation work in a TypeScript/Bun real-time project-management monorepo.",
+      contributions: [
+        {
+          number: 364,
+          title: "Searchable VitePress documentation site",
+          detail: "Generated navigation, local search, theming, and GitHub Pages deployment.",
+          url: "https://github.com/Noveum/orbit/pull/364",
+        },
+        {
+          number: 333,
+          title: "Automated dated releases and release notes",
+          detail: "Recovery-safe tagging, exact commit ranges, validation, and focused tests.",
+          url: "https://github.com/Noveum/orbit/pull/333",
+        },
+        {
+          number: 315,
+          title: "Secure Markdown link verification",
+          detail: "Lychee checks with immutable action pins and accurate failure handling.",
+          url: "https://github.com/Noveum/orbit/pull/315",
+        },
+        {
+          number: 305,
+          title: "Canonical quick-start documentation",
+          detail: "Removed duplicated setup instructions to reduce documentation drift.",
+          url: "https://github.com/Noveum/orbit/pull/305",
+        },
+      ],
+    },
+    {
+      project: "Phantom",
+      repo: "phantomsoldierking/phantom",
+      url: "https://github.com/phantomsoldierking/phantom",
+      summary: "A keyboard-first terminal companion for monitoring developer workflows.",
+      contributions: [
+        {
+          number: 1,
+          title: "Project landing page",
+          detail: "Built the responsive landing and documentation interface for the Go CLI.",
+          url: "https://github.com/phantomsoldierking/phantom/pull/1",
+        },
+      ],
+    },
+    {
+      project: "Trivy CI/CD",
+      repo: "phantomsoldierking/trivy-cicd-github-repo",
+      url: "https://github.com/phantomsoldierking/trivy-cicd-github-repo",
+      summary: "A container-security workflow combining Trivy, LocalStack, data storage, and risk analytics.",
+      contributions: [
+        {
+          number: 2,
+          title: "Dashboard and database foundation",
+          detail: "Added vulnerability tracking schemas and the initial analytics dashboard.",
+          url: "https://github.com/phantomsoldierking/trivy-cicd-github-repo/pull/2",
+        },
+        {
+          number: 1,
+          title: "Architecture and setup documentation",
+          detail: "Documented LocalStack services and local Docker-based testing workflows.",
+          url: "https://github.com/phantomsoldierking/trivy-cicd-github-repo/pull/1",
+        },
+      ],
+    },
+  ],
   stack: [
     {
       label: "Build",
@@ -105,9 +191,21 @@ export const portfolioData = {
     },
   ],
   interests: [
-    "Financial markets & market structure",
-    "Business models & unit economics",
-    "Cloud infrastructure & resilient systems",
-    "Geopolitics, macroeconomics & technology history",
+    {
+      title: "Markets & business models",
+      description: "Annual reports, unit economics, economic moats, capital allocation, and market microstructure.",
+    },
+    {
+      title: "Geopolitics & macro",
+      description: "Trade flows, monetary regimes, sovereign debt, energy security, and second-order effects.",
+    },
+    {
+      title: "Technology & supply chains",
+      description: "Semiconductors, cloud infrastructure, critical systems, and technology history.",
+    },
+    {
+      title: "Systems & mental models",
+      description: "Software architecture, resilient design, non-fiction, and first-principles thinking.",
+    },
   ],
 } as const;
